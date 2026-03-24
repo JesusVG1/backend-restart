@@ -23,6 +23,15 @@ app.post("/users", (req, res) => {
     });
 });
 
+app.get("/users/:id", (req, res) => {
+    const { id } = req.params;
+
+    res.json({
+        id,
+        name: "Usuario ejemplo"
+    });
+});
+
 app.listen(3000, () => {
     console.log("Servidor en puerto 3000")
 })
